@@ -1,3 +1,4 @@
 .AccountOverview {
-  background-color: lightblue;
+  max-width: 1000px;
+  margin: auto;
 }

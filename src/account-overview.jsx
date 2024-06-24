@@ -1,19 +1,25 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHardHat } from '@fortawesome/free-solid-svg-icons';
-import styled from 'styled-components';
-
 import './account-overview.css';
+import Header from './components/Header/header';
+import SalesInformation from './components/Sales/SalesInformation/sales-information'
+import SalesData from './components/Sales/SalesData/sales-data';
+import { accountOverviewPropTypes } from './utils/propsTypesValidation'
 
 export const AccountOverview = ({data}) => {
-  console.log(data);
 
   return (
     <div className="AccountOverview">
-      <FontAwesomeIcon icon={faHardHat} />
-      Build your components here
+      <Header data={data}/>
+      <SalesInformation data={data.salesOverview}/>
+      <SalesData data={data.salesOverview}/>
     </div>
   )
+
 }
+
+// Using centralized PropTypes
+AccountOverview.propTypes = {
+  data: accountOverviewPropTypes.isRequired,
+};
 
 export default AccountOverview;
