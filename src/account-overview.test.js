@@ -34,3 +34,4 @@ test('Checks if the text exists inside the component', () => {
 });
 
 
+
