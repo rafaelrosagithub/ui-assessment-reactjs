@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-// PropTypes para supportContact
+// PropTypes para supportContact 
 export const supportContactPropTypes = PropTypes.shape({
   name: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
